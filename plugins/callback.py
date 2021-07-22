@@ -152,17 +152,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             pass
     elif query.data=="help":
         buttons = [
+            
             [
-                InlineKeyboardButton("🔥 Source Code 🔥", url='https://github.com/LushaiMusic/VCMusicPlayer'),
+               InlineKeyboardButton('👥 Group', url='https://t.me/joinchat/O5X8JODwVEBlMGFh'),
             ],
-            [
-               InlineKeyboardButton('👥 Group', url='https://t.me/iZaute/5'),
-               InlineKeyboardButton('Channel 📢', url='https://t.me/iZaute/6'),
-            ],
-            [
-               InlineKeyboardButton('🔰 How to Deploy 🔰', url='https://t.me/c/1481808444/131'),
-        
-            ]
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_text(

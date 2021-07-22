@@ -610,7 +610,7 @@ admincmds=["join", "unmute", "mute", "leave", "clean", "vc", "pause", "resume", 
 
 @Client.on_message(filters.command(admincmds) & ~filters.user(ADMINS) & (filters.chat(CHAT) | filters.private))
 async def notforu(_, m: Message):
-    k=await m.reply("Who the hell you are?.")
+    k=await m.reply("Who the hell you are? 🤨.")
     await mp.delete(k)
     await m.delete()
 

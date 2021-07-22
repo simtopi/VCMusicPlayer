@@ -25,7 +25,7 @@ import sys
 U=USERNAME
 CHAT=Config.CHAT
 msg=Config.msg
-HOME_TEXT = "<b>Hello, [{}](tg://user?id={})\n\nI am 24×7 Non Stop Radio/Music Player.\n\nHits /help for more details...</b>"
+HOME_TEXT = "<b>Hello, [{}](tg://user?id={})\n\nI am Music Girl 24×7 Non Stop Radio/Music Player.\n\nHits /help for more details...</b>"
 HELP = """
 **User Commands:**
 ▷/play **[song name]/[yt link]**: Reply to an audio file.
@@ -56,13 +56,7 @@ HELP = """
 @Client.on_message(filters.command(['start', f'start@{U}']))
 async def start(client, message):
     buttons = [
-        [
-        InlineKeyboardButton("🔥 Source Code 🔥", url='https://github.com/LushaiMusic/VCMusicPlayer'),
-    ],
-    [
-        InlineKeyboardButton('👥 Group', url='https://t.me/iZaute/5'),
-        InlineKeyboardButton('Channel 📢', url='https://t.me/iZaute/6'),
-    ],
+        
     [
         InlineKeyboardButton('🆘 Help & Commands 🆘', callback_data='help'),
 
@@ -77,17 +71,10 @@ async def start(client, message):
 @Client.on_message(filters.command(["help", f"help@{U}"]))
 async def show_help(client, message):
     buttons = [
-        [
-            InlineKeyboardButton("🔥 Source Code 🔥", url='https://github.com/LushaiMusic/VCMusicPlayer'),
-        ],
-        [
-            InlineKeyboardButton('👥 Group', url='https://t.me/iZaute/5'),
-            InlineKeyboardButton('Channel 📢', url='https://t.me/iZaute/6'),
-        ],
-        [
-            InlineKeyboardButton('🔰 How to Deploy 🔰', url='https://t.me/c/1481808444/131'),
-        
-        ]
+      [
+        InlineKeyboardButton('🆘 Help & Commands 🆘', callback_data='help'),
+
+    ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
     await message.reply_text(

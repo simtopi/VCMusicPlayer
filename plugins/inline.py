@@ -21,6 +21,9 @@ from config import Config
 REPLY_MESSAGE=Config.REPLY_MESSAGE
 buttons = [ 
     [
+        InlineKeyboardButton('👨‍🎤 Play Music', url=f'https://t.me/{USERNAME}'),
+    ],
+    [
         InlineKeyboardButton('🆘 Help & Commands 🆘', callback_data='help')       
     ]
     ]

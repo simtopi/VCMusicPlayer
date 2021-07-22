@@ -19,6 +19,11 @@ from pyrogram.types import InlineQueryResultArticle, InputTextMessageContent, In
 from pyrogram import Client, errors
 from config import Config
 REPLY_MESSAGE=Config.REPLY_MESSAGE
+buttons = [ 
+    [
+        InlineKeyboardButton('🆘 Help & Commands 🆘', callback_data='help')       
+    ]
+    ]
 @Client.on_inline_query()
 async def search(client, query):
     answers = []
